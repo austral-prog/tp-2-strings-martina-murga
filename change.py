@@ -6,8 +6,8 @@ def change():
     recibido= float(input("dinero recibido: "))
     vuelto= recibido-gasto
     pesos = int(vuelto)
-    centavos = (vuelto - pesos) * 100
+    centavos = ((vuelto - pesos) * 100)
     
-    print(vuelto)
-    print(pesos)
-    print(centavos)
+    print("vuelto: ", vuelto)
+    print("pesos: ",pesos)
+    print("centavos: ", centavos)
