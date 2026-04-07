@@ -8,6 +8,6 @@ def change():
     pesos = int(vuelto)
     centavos = round((vuelto - pesos) * 100)
     
-    print("Vuelto total:", vuelto)
-    print("Pesos:", pesos)
-    print("Centavos:", centavos)
+    print(vuelto)
+    print(pesos)
+    print(centavos)
