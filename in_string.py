@@ -2,7 +2,7 @@ def check_vowels():
     """Lee un nombre y verifica si contiene cada una de las vocales (a, e, i, o, u),
     sin distinguir mayúsculas de minúsculas.
     """
-    nombre = input("Ingrese un nombre: ").lower()
+    nombre = input().lower()
     tiene_a = 'a' in nombre
     tiene_e = 'e' in nombre
     tiene_i = 'i' in nombre
