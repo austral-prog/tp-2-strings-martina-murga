@@ -24,4 +24,46 @@ def ficha():
     #   - Código secreto: nombre invertido en mayúsculas
     #   - Las 3 notas, su suma, promedio y promedio entero
     #   - Cierre decorativo usando repetición de string ("=" * 24)
-    pass
+    nombre = input("Nombre completo: ")
+    email = input("Email: ")
+    n1 = input("Nota 1: ")
+    n2 = input("Nota 2: ")
+    n3 = input("Nota 3: ")
+    nombre = nombre.strip().title()
+    email = email.lower()
+    nombre_len = len(nombre)
+    indice_espacio = nombre.find(" ")
+    iniciales = nombre[0] + nombre[indice_espacio + 1]
+    p_nombre = nombre[:indice_espacio].lower()
+    p_apellido = nombre[indice_espacio + 1:].lower()
+    usuario = f"{p_apellido}.{p_nombre}"
+    tiene_arroba = "@" in email
+    dominio = email[email.find("@") + 1:]
+    nombre_guion = nombre.replace(" ", "_")
+    cuenta_a = nombre.lower().count("a")
+    codigo_secreto = nombre[::-1].upper()
+    nota1 = int(n1)
+    nota2 = int(n2)
+    nota3 = int(n3)
+    suma = nota1 + nota2 + nota3
+    promedio = suma / 3
+    promedio_entero = suma // 3
+    ficha_texto = f"""
+    {"=" * 24}
+     FICHA DE ALUMNO
+    {"=" * 24}
+    Nombre: {nombre} ({nombre_len} letras)
+    Iniciales: {iniciales}
+    Email: {email} (Válido: {tiene_arroba})
+    Dominio: {dominio}
+    Usuario: {usuario}
+    Nombre ID: {nombre_guion}
+    Letras 'a': {cuenta_a}
+    Código Secreto: {codigo_secreto}
+    Notas: {nota1}, {nota2}, {nota3}
+    Suma total: {suma}
+    Promedio: {promedio:.2f}
+    Promedio Entero: {promedio_entero}
+    {"=" * 24}
+    """
+    print(ficha_texto)
