@@ -6,20 +6,22 @@ def string_methods():
     nombre = "   Grace Hopper   "
     frase = "Python es un gran lenguaje de programacion"
     multilinea = """Linea 1
-    Linea 2
-    Linea 3"""
+Linea 2
+Linea 3"""
 
-    print(nombre.strip())
-    print(nombre.lstrip())
-    print(nombre.rstrip())
-    print(f"Mayúsculas: {nombre.upper()}")
-    print(f"Minúsculas: {nombre.lower()}")
-    print(f"Título: {nombre.title()}")
-    print(f"Posición de Python: {frase.find('Python')}")
-    print(f"Cantidad de letras a: {frase.count('a')}")
-    print(f"¿Dice gran?: {'gran' in frase}")
-    print(f"Frase nueva: {frase.replace('gran', 'bueno')}")
-    print(f"Slicing paso 2: {frase[0:10:2]}")
-    print(f"Nombre al revés: {nombre[::-1]}")
-    print("Texto con varias líneas:")
+    print(f"Strip: {nombre.strip()}")
+    print(f"Lstrip: {nombre.lstrip()}")
+    print(f"Rstrip: {nombre.rstrip()}")
+    print(f"Upper: {frase.upper()}")
+    print(f"Lower: {frase.lower()}")
+    print(f"Title: {frase.title()}")
+    print(f"Find: {frase.find('gran')}")
+    print(f"Replace: {frase.replace('programacion', 'desarrollo')}")
+    print(f"Count: {frase.count('a')}")
+    print(f"Contiene Python: {'Python' in frase}")
+    print(f"Contiene Java: {'Java' in frase}")
+    print(f"Slice: {frase[0:6]}")
+    print(f"Paso: {frase[0:6:2]}")
+    print(f"Reverso: {frase[5::-1]}")
+    print(f"Formato: {nombre.strip()} sabe Python")
     print(multilinea)
