@@ -24,11 +24,11 @@ def ficha():
     #   - Código secreto: nombre invertido en mayúsculas
     #   - Las 3 notas, su suma, promedio y promedio entero
     #   - Cierre decorativo usando repetición de string ("=" * 24)
-    nombre = input("Nombre completo: ")
-    email = input("Email: ")
-    n1 = input("Nota 1: ")
-    n2 = input("Nota 2: ")
-    n3 = input("Nota 3: ")
+    nombre = input()
+    email = input()
+    n1 = input()
+    n2 = input()
+    n3 = input()
     nombre = nombre.strip().title()
     email = email.lower()
     nombre_len = len(nombre)
@@ -48,22 +48,25 @@ def ficha():
     suma = nota1 + nota2 + nota3
     promedio = suma / 3
     promedio_entero = suma // 3
-    ficha_texto = f"""
-    {"=" * 24}
-     FICHA DE ALUMNO
-    {"=" * 24}
-    Nombre: {nombre} ({nombre_len} letras)
-    Iniciales: {iniciales}
-    Email: {email} (Válido: {tiene_arroba})
-    Dominio: {dominio}
-    Usuario: {usuario}
-    Nombre ID: {nombre_guion}
-    Letras 'a': {cuenta_a}
-    Código Secreto: {codigo_secreto}
-    Notas: {nota1}, {nota2}, {nota3}
-    Suma total: {suma}
-    Promedio: {promedio:.2f}
-    Promedio Entero: {promedio_entero}
-    {"=" * 24}
+    ficha_texto =f"""{"=" * 24}
+    FICHA DEL ALUMNO
+{"=" * 24}
+Nombre: {nombre}
+Email: {email}
+Caracteres en nombre: {nombre_len}
+Iniciales: {iniciales}
+Usuario: {usuario}
+Email valido: {tiene_arroba}
+Dominio: {dominio}
+Nombre para archivo: {nombre_guion}
+Cantidad de a: {cuenta_a}
+Codigo secreto: {codigo_secreto}
+Nota 1: {nota1}
+Nota 2: {nota2}
+Nota 3: {nota3}
+Suma: {suma}
+Promedio: {promedio:.1f}
+Promedio entero: {promedio_entero}
+{"=" * 24}
     """
     print(ficha_texto)
