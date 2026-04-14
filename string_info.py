@@ -6,8 +6,11 @@ def string_info():
     longitud = len(palabra)
     primera = palabra[0]
     ultima = palabra[-1]
-    decorada = f"***{palabra * 3}***"
+    repetida = palabra * 3
+    decorada = f"***{palabra}***"
+    print(f"Palabra: {palabra}")
     print(f"Longitud: {longitud}")
     print(f"Primera letra: {primera}")
-    print(f"Última letra: {ultima}")
-    print(decorada)
+    print(f"Ultima letra: {ultima}")
+    print(f"Repetida: {repetida}")
+    print(f"Decorada: {decorada}")
